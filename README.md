@@ -10,4 +10,4 @@ Notes from [JupyterHub September 2019 Oslo Meeting](https://hackmd.io/@YTPvGLFDT
 
 ## Inspiration
 
-Inspired by [Kelsey Hightower's Kubernetes The Hard Way}(https://github.com/kelseyhightower/kubernetes-the-hard-way)
+Inspired by [Kelsey Hightower's Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
