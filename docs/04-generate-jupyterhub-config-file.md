@@ -23,7 +23,7 @@ jupyterhub --generate-config
 ```
 A `jupyterhub_config.py` file has been created.
 
-### Inspect the configuration file `jupyterhub_config.py`.
+### Inspect the configuration file
 
 As a typical Python file, `jupyterhub_config.py` can include any valid
 Python commands. When JupyterHub starts, the configuration file is executed.
