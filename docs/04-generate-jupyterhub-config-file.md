@@ -14,16 +14,19 @@ A config has been generated.
 
 **Task** Inspect the configuration file `jupyterhub_config.py`
 
-### Add an admin user
+## Add an admin user
 
 Find line with `admin_users` and create a set with `{ your_username}`
 
-### Restart JupyterHub
+## Restart JupyterHub
 
 For configuration changes to take effect, the hub must be restarted.
 
 - Stop the hub if it running
--
+
+## Explore JupyterHub's admin user interface
+
+
 ---
 
 ## Key Concepts
