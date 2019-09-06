@@ -2,7 +2,15 @@
 
 **THIS IS A WORK IN PROGRESS**
 
-Understanding JupyterHub by deploying it step by step
+Understanding JupyterHub by deploying it step by step.
+
+## Motivation
+
+We want to help you build understanding of JupyterHub and its core components: proxy, authenticator, spawner.
+This tutorial goes through a series of labs to progressively customize JupyterHub beyond its defaults. The
+configurability of JupyterHub enables its use in a variety of deployment settings. This benefits our users, but
+also makes it difficult to recommend a one-size-fits-all deployment. By helping you understand how
+JupyterHub works, we hope you will be able to confidently customize JupyterHub to suit your deployment needs.
 
 ## Project Notes
 
