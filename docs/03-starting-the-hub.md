@@ -46,9 +46,10 @@ Control-C in the terminal to stop JupyterHub
 
 ---
 
-TODO
+## Extend your learning
 
 Modification: Set up an ssh tunnel [See assumptions above]
 
+---
 
 Next: [Creating a JupyterHub Configuration File](04-generate-jupyterhub-config-file.md)

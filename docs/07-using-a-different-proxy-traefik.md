@@ -1,8 +1,5 @@
 # Using a Different Proxy (Traefik)
 
-**Recap until here**
-We've learned about JupyterHub, proxy, hub, spawner
-
 ## Setting up Traefik Proxy
 
 Let's use the Traefik proxy instead of configurable-http-proxy.
@@ -53,13 +50,19 @@ The proxy is a customisable endpoint.
 
 Routing must be done on a longest prefix basis. Route for / and everything else is below. Let JupyterHub have a base route and user routes adds specificity.
 
-**Concepts:**
+---
+
+## Key Concepts
 
 **Learned:**
 
 Run the proxy external to the hub.
 Restarting jupyterhub restarts everything. So that users can still talk to their running servers without involving the hub while it restarts, we want to run the proxy external to the hub.
 
-**Results:**
+---
+
+## Extend your learning
+
+---
 
 Next: [Setting Up HTTPS](08-setting-up-HTTPS.md)
