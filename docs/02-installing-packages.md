@@ -47,6 +47,10 @@ jupyterhub -h
 jupyter notebook --version
 ```
 
+---
+
+## Key Concepts
+
 ### Where are we now?
 
 We have:
@@ -56,10 +60,6 @@ We have:
 - JupyterHub itself and the Jupyter notebook
 
 This is everything that we need to run a basic installation of JupyterHub.
-
----
-
-## Key Concepts
 
 ---
 
