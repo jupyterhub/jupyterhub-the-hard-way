@@ -23,7 +23,7 @@ Inspired by [Kelsey Hightower's Kubernetes The Hard Way](https://github.com/kels
 ## Labs
 
 - [Prerequisites](docs/01-prerequisites.md)
-- [Installing Packages](docs/02-installing-pachages.md)
+- [Installing Packages](docs/02-installing-packages.md)
 - [Starting the Hub](docs/03-starting-the-hub.md)
 - [Creating a JupyterHub Configuration File](docs/04-generate-jupyterhub-config-file.md)
 - [Spawning Notebook Servers](docs/05-spawning-notebook-servers.md)
