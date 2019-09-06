@@ -57,4 +57,14 @@ We have:
 
 This is everything that we need to run a basic installation of JupyterHub.
 
+---
+
+## Key Concepts
+
+---
+
+## Extend your learning
+
+---
+
 Next: [Starting the Hub](03-starting-the-hub.md)

@@ -56,7 +56,10 @@ By default, containers are only started and stopped (not deleted) and so they pe
 %pip list
 ```
 
-**Concepts**
+---
+
+## Key Concepts
+
 Everyone using JupyterHub wants to expose some computational resources for use. Two scenarios:
 * Just expose an access point. Users are power users and can look after their own environments.
 * Person deploying the JupyterHub controls the user environment - done by a Docker image.
@@ -64,11 +67,15 @@ Everyone using JupyterHub wants to expose some computational resources for use. 
 - Configuration of JupyterHub and restart.
 - Configuration of the spawner
 
-**TODO:** Build a single-user image from scratch, not using a stack
-
 **Learned** Single user servers need to talk to the hub. When Docker added, configuration change is needed to take into account the network location of Docker. Now there are two things to configure DockerSpawner and JupyterHub
 DockerSpawner is unique that restart of JupyterHub is not enough. Sensible default?
 
-**Result**
+---
+
+## Extend your learning
+
+**TODO:** Build a single-user image from scratch, not using a stack
+
+---
 
 Next: [Configuring the Chosen Spawner](06-configuring-the-chosen-spawner.md)

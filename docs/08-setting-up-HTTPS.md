@@ -209,4 +209,14 @@ sudo systemctl daemon-reload && sudo systemctl restart jupyterhub
 
 ### Using journalctl to view the logs
 
-Next: [Authenticators]
+---
+
+## Key Concepts
+
+---
+
+## Extend your learning
+
+---
+
+Next: [Authenticators](09-using-a-different-authenticator.md)
