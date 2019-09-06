@@ -42,4 +42,4 @@ TODO
 Modification: Set up an ssh tunnel [See assumptions above]
 
 
-Next: [04-Configuring-JupyterHub](docs/04-configuring-jupyterhub.md)
+Next: [Creating a JupyterHub Configuration File](04-generate-jupyterhub-config-file.md)
