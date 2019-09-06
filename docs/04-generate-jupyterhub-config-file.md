@@ -39,4 +39,4 @@ For configuration changes to take effect, the hub must be restarted.
 
 *TODO* Add a whitelist, port, admin
 
-Next:
+Next: [Spawning Notebook Servers](05-spawning-notebook-servers.md)
