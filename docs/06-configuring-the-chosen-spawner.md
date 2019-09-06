@@ -14,4 +14,4 @@ There's lots to configure.
 We've learned about JupyterHub, proxy, hub, spawner
 
 
-Next:
+Next: [Using a different proxy (Traefik)](07-using-a-different-proxy-traefik.md)

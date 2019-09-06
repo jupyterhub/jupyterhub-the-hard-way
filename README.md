@@ -20,3 +20,6 @@ Inspired by [Kelsey Hightower's Kubernetes The Hard Way](https://github.com/kels
 - [Creating a JupyterHub Configuration File](docs/04-generate-jupyterhub-config-file.md)
 - [Spawning Notebook Servers](docs/05-spawning-notebook-servers.md)
 - [Configuring the Chosen Spawner](docs/06-configuring-the-chosen-spawner.md)
+- [Using a Different Proxy (Traefik)](docs/07-using-a-different-proxy-traefik.md)
+- [Setting up HTTPS](docs/08-setting-up-HTTPS.md)
+- Authenticators
