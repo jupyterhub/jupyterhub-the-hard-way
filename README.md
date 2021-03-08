@@ -32,3 +32,5 @@ Inspired by [Kelsey Hightower's Kubernetes The Hard Way](https://github.com/kels
 - [Setting up HTTPS](docs/08-setting-up-HTTPS.md)
 - [Using a Different Authenticator (GitHub Oauthenticator)](docs/09-using-a-different-authenticator.md)
 - [Cleaning Up](docs/10-cleaning-up.md)
+
+## Alternative walkthrough: [Install JupyterHub and JupyterLab from the ground up](docs/installation-guide-hard.md)
