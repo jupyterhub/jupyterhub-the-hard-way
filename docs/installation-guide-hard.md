@@ -265,7 +265,7 @@ On login they should run `conda init` or `/opt/conda/bin/conda`. The can then us
 although they must also install `ipykernel`. Once done, they can enable their kernel using:
 
 ```sh
-/path/to/kernel/env/bin/python -m ipykernel install --name 'python-my-env' --display-name "Python My Env"
+/path/to/kernel/env/bin/python -m ipykernel install --user --name 'python-my-env' --display-name "Python My Env"
 ```
 
 This will place the kernel spec into their home folder, where Jupyter will look for it on startup.
