@@ -113,7 +113,7 @@ You will need to edit the configuration file to make the JupyterLab interface by
 Set the following configuration option in your `jupyterhub_config.py` file:
 
 ```python
-c.Spawner.default_url = '/lab'
+c.Spawner.default_url = "/lab"
 ```
 
 Further configuration options may be found in the documentation.
@@ -292,7 +292,7 @@ To achieve this needs a few tweaks to both the JupyterHub configuration and the 
 configuration file `/opt/jupyterhub/etc/jupyterhub/jupyterhub_config.py` and add the line:
 
 ```python
-c.JupyterHub.bind_url = 'http://:8000/jupyter'
+c.JupyterHub.bind_url = "http://:8000/jupyter"
 ```
 
 where `/jupyter` will be the relative URL of the JupyterHub.
