@@ -14,7 +14,7 @@ JupyterHub works, we hope you will be able to confidently customize JupyterHub t
 
 ## Project Notes
 
-Notes from [JupyterHub September 2019 Oslo Meeting](https://hackmd.io/@YTPvGLFDTVmF7E0kLlhYvQ/BJskJUABS)
+Notes from [JupyterHub September 2019 Oslo Meeting](docs/hackmd-notes.md)
 
 ## Inspiration
 
