@@ -1,6 +1,7 @@
 # Generate a JupyterHub Configuration File
 
 In this lab, you will:
+
 - create a JupyterHub configuration file, `jupyterhub_config.py`
 - add an admin
 - explore the JupyterHub admin user interface
@@ -21,6 +22,7 @@ mkdir hub
 cd hub
 jupyterhub --generate-config
 ```
+
 A `jupyterhub_config.py` file has been created.
 
 ### Inspect the configuration file
@@ -44,9 +46,9 @@ access. For example, let's grant the `hardway_admin` user rights to administer
 JupyterHub:
 
 ```python
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Authenticator(LoggingConfigurable) configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 ## Base class for implementing an authentication provider for JupyterHub
 
@@ -62,7 +64,7 @@ JupyterHub:
 #  Admin access should be treated the same way root access is.
 #
 #  Defaults to an empty set, in which case no user has admin access.
-c.Authenticator.admin_users = { 'hardway_admin' }
+c.Authenticator.admin_users = {"hardway_admin"}
 ```
 
 ## Restart JupyterHub
@@ -80,22 +82,22 @@ From the navbar in JupyterHub, access administrative options through the `Admin`
 The JupyterHub admin user interface allows admins to monitor, start, and stop
 a user's notebook server.
 
----
+______________________________________________________________________
 
 ## Key Concepts
 
-* JupyterHub has a configuration file, `jupyterhub_config.py`. It is a Python script.
-* A configuration item is represented by the format `c.application_to_be_configured.trait = setting`.
-* The JupyterHub configuration file allows users to be given rights as an admin.
-* The JupyterHub admin user interface allows admins to monitor, start, and stop
+- JupyterHub has a configuration file, `jupyterhub_config.py`. It is a Python script.
+- A configuration item is represented by the format `c.application_to_be_configured.trait = setting`.
+- The JupyterHub configuration file allows users to be given rights as an admin.
+- The JupyterHub admin user interface allows admins to monitor, start, and stop
   a user's notebook server.
 
----
+______________________________________________________________________
 
 ## Extend your learning
 
 *TODO* Add a whitelist, port, admin
 
----
+______________________________________________________________________
 
 Next: [Spawning Notebook Servers](05-spawning-notebook-servers.md)

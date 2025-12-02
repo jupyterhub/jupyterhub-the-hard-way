@@ -1,4 +1,4 @@
-# jupyterhub-the-hard-way
+# JupyterHub the Hard Way
 
 **THIS IS A WORK IN PROGRESS**
 

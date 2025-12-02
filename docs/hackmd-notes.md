@@ -11,24 +11,24 @@ Assumptions:
 - Ubuntu latest LTS
 - Python? Conda?
 - What assumptions are in the commands we're writing?
-    - ports
-    - sudo access (probably a reasonable assumption though)
-    - assuming linux dist (make notes for macs)
-    - gcloud use option -L 8000:127.0.0.1:8000 to make localhost to pass no credentials over http (insecure)
-        - Windows??
+  - ports
+  - sudo access (probably a reasonable assumption though)
+  - assuming linux dist (make notes for macs)
+  - gcloud use option -L 8000:127.0.0.1:8000 to make localhost to pass no credentials over http (insecure)
+    - Windows??
 - Running on a server with a real domain name pointing to it
 
 Future:
 
 - Flavor UI for steps with differences (apt, yum, mac)
-    - eg, [`kubectl` installation guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+  - eg, [`kubectl` installation guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 Open questions:
+
 - Cloud vs local setup
 - Right order for introducing Spawners?
 
-
----
+______________________________________________________________________
 
 ## Installation
 
@@ -53,6 +53,7 @@ Install JupyterHub and notebook:
 ```
 sudo python3 -m pip install --upgrade jupyterhub notebook
 ```
+
 Started JupyterHub on a port
 
 Authenticate JupyterHub user password (PAM)
@@ -66,8 +67,8 @@ Enter username/password launched a server
 Proxy is started when typing JupyterHub. In this case, the configurable-http-proxy is started.
 
 **Task** Click Control Panel
-    - Start and Stop Server for the User
-    
+\- Start and Stop Server for the User
+
 **Concept** JupyterHub is not different than Jupyter notebook and JupyterLab. It's a tool for deploying those on behalf of users.
 
 At this point, no admin stuff has been discussed.
@@ -111,6 +112,7 @@ Find line with `admin_users` and create a set with `{ your_username}`
 Install DockerSpawner and Docker.
 
 Set docker group! - Make sure you have permission to use Docker!
+
 ```
 sudo usermod -aG docker `whoami`  # Add me to group called docker
 newgrp docker  # Start new shell where docker group is activated
@@ -128,8 +130,9 @@ Error message: When visiting a notebook server, the proxy sends the message to t
 
 ```python
 import netifaces
-docker_iface = netifaces.ifaddresses('docker0')
-c.JupyterHub.hub_ip = docker_iface[netifaces.AF_INET][0]['addr']
+
+docker_iface = netifaces.ifaddresses("docker0")
+c.JupyterHub.hub_ip = docker_iface[netifaces.AF_INET][0]["addr"]
 ```
 
 Delete the Container and restart JupyterHub to use new config.
@@ -137,6 +140,7 @@ Delete the Container and restart JupyterHub to use new config.
 By default, containers are only started and stopped (not deleted) and so they persist part of the configuration.
 
 **Task** Create a notebook to see the changes made by DockerSpawner to username as Jovyan.
+
 ```
 !hostname
 
@@ -145,29 +149,29 @@ By default, containers are only started and stopped (not deleted) and so they pe
 %pip list
 ```
 
-**Concepts** 
+**Concepts**
 Everyone using JupyterHub wants to expose some computational resources for use. Two scenarios:
-* Just expose an access point. Users are power users and can look after their own environments.
-* Person deploying the JupyterHub controls the user environment - done by a Docker image.
 
-- Configuration of JupyterHub and restart. 
-- Configuration of the spawner
+- Just expose an access point. Users are power users and can look after their own environments.
+- Person deploying the JupyterHub controls the user environment - done by a Docker image.
+
+* Configuration of JupyterHub and restart.
+* Configuration of the spawner
 
 **TODO:** Build a single-user image from scratch, not using a stack
 
 **Learned** Single user servers need to talk to the hub. When Docker added, configuration change is needed to take into account the network location of Docker. Now there are two things to configure DockerSpawner and JupyterHub
-DockerSpawner is unique that restart of JupyterHub is not enough. Sensible default? 
+DockerSpawner is unique that restart of JupyterHub is not enough. Sensible default?
 
-**Result** 
+**Result**
 
 ## Configuring our chosen Spawner
 
 Choose a new image from docker-stacks
 
-The logs showed that we were pulling the image from dockerhub. 
+The logs showed that we were pulling the image from dockerhub.
 
 There's lots to configure.
-
 
 **Recap until here**
 We've learned about JupyterHub, proxy, hub, spawner
@@ -177,6 +181,7 @@ We've learned about JupyterHub, proxy, hub, spawner
 Let's use the Traefik proxy instead of configurable-http-proxy.
 
 Install the Traefik Python API:
+
 ```bash
 python3 -m pip install jupyterhub-traefik-proxy
 ```
@@ -188,34 +193,35 @@ Downloads the Traefik binary (any other method of downloading this binary is fin
 ```bash
 sudo python3 -m jupyterhub_traefik_proxy.install --output=/usr/local/bin
 ```
+
 Tell JupyterHub to use Traefik for the reverse proxy.
 
 Edit `jupyterhub_config.py`:
 
 ```python
-c.JupyterHub.proxy_class = 'traefik_toml'
+c.JupyterHub.proxy_class = "traefik_toml"
 ```
 
 Generate a secret using `openssl rand -hex 32`.
 
 ```python
-c.TraefikTomlProxy.traefik_api_username = 'traefik'
-c.TraefikTomlProxy.traefik_api_password = 'place_secret_here'
+c.TraefikTomlProxy.traefik_api_username = "traefik"
+c.TraefikTomlProxy.traefik_api_password = "place_secret_here"
 ```
 
 Restart JupyterHub.
 
 Traefik is now running. JupyterHub is starting the proxy.
 
-
-
 Potential discussion points:
-* Discuss what a proxy is
-* Diagram of different routes
+
+- Discuss what a proxy is
+- Diagram of different routes
 
 JupyterHub is a tool for starting endpoints and creating a proxy to route requests.
 
 The proxy is a customisable endpoint.
+
 - show current routes
 - add a new route
 - remove an existing route
@@ -239,7 +245,7 @@ sudo apt install apache2-utils
 
 When we started JupyterHub earlier, JupyterHub was starting the Hub and the proxy.
 
-systemd can start and stop processes. 
+systemd can start and stop processes.
 
 Let's use systemd instead of JupyterHub to start the Traefik proxy. This allows modifications of the proxy to be done independent of a running JupyterHub.
 
@@ -325,7 +331,7 @@ filename = "rules.toml"
 watch = true
 ```
 
-Above should have the same config as the http one. 
+Above should have the same config as the http one.
 
 We modify `users = ` to use the Traefik user and password. We run:
 
@@ -335,7 +341,6 @@ htpasswd -bn $traefik_api_username $traefik_api_password
 
 Take the output and enter in the `users = ['xxxx']` line in the `traefik.toml` file.
 
-
 Reload systemd to find the new service:
 
 ```bash
@@ -343,8 +348,9 @@ sudo systemctl daemon-reload
 ```
 
 Update `jupyterhub_config.py`:
+
 - to not start the Traefik proxy `c.TraefikTomlProxy.should_start = False`
--  add `c.TraefikTomlProxy.toml_dynamic_config_file = '/srv/jupyterhub/proxy/rules.toml'`
+- add `c.TraefikTomlProxy.toml_dynamic_config_file = '/srv/jupyterhub/proxy/rules.toml'`
 
 ```bash
 sudo systemctl start jupyterhub-proxy
@@ -440,7 +446,6 @@ sudo systemctl daemon-reload && sudo systemctl restart jupyterhub
 
 ### Using journalctl to view the logs
 
-
 ## Authenticators
 
 Using GitHub OAuth - needs to use public accessible server but will require HTTPS. (We set up HTTPS above.)
@@ -453,21 +458,20 @@ sudo python3 -m pip install oauthenticator
 
 Configure authenticator in `jupyterhub_config.py`:
 
-
 GitHub set up of Oauth
 https://github.com/settings/apps/new
+
 - Developer settings
 - Oauth App
-    - Give a name jupyterhub the hard way
-    - Homepage url https://hardway.jupyter.org
-    - callback url https://hardway.jupyter.org/
+  - Give a name jupyterhub the hard way
+  - Homepage url https://hardway.jupyter.org
+  - callback url https://hardway.jupyter.org/
 
 Add Oauth info to `jupyterhub_config.py`
-
 
 ```bash
 sudo apt install libssl-dev       libcurl4-openssl-dev
 sudo python3 -m pip install pycurl
 ```
-Note: above is a Tornado bug that seems to come up with GitHub Oauth.
 
+Note: above is a Tornado bug that seems to come up with GitHub Oauth.

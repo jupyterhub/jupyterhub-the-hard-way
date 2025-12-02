@@ -104,7 +104,6 @@ htpasswd -bn $traefik_api_username $traefik_api_password
 
 Take the output and enter in the `users = ['xxxx']` line in the `traefik.toml` file.
 
-
 Reload systemd to find the new service:
 
 ```bash
@@ -112,8 +111,9 @@ sudo systemctl daemon-reload
 ```
 
 Update `jupyterhub_config.py`:
+
 - to not start the Traefik proxy `c.TraefikTomlProxy.should_start = False`
--  add `c.TraefikTomlProxy.toml_dynamic_config_file = '/srv/jupyterhub/proxy/rules.toml'`
+- add `c.TraefikTomlProxy.toml_dynamic_config_file = '/srv/jupyterhub/proxy/rules.toml'`
 
 ```bash
 sudo systemctl start jupyterhub-proxy
@@ -209,14 +209,14 @@ sudo systemctl daemon-reload && sudo systemctl restart jupyterhub
 
 ### Using journalctl to view the logs
 
----
+______________________________________________________________________
 
 ## Key Concepts
 
----
+______________________________________________________________________
 
 ## Extend your learning
 
----
+______________________________________________________________________
 
 Next: [Authenticators](09-using-a-different-authenticator.md)

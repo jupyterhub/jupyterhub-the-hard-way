@@ -21,7 +21,6 @@ python3 -m pip --version
 We now have the runtimes for Python and Node.js
 and can start installing the packages we need.
 
-
 ## Install a Proxy
 
 ```bash
@@ -47,7 +46,7 @@ jupyterhub -h
 jupyter notebook --version
 ```
 
----
+______________________________________________________________________
 
 ## Key Concepts
 
@@ -61,10 +60,10 @@ We have:
 
 This is everything that we need to run a basic installation of JupyterHub.
 
----
+______________________________________________________________________
 
 ## Extend your learning
 
----
+______________________________________________________________________
 
 Next: [Starting the Hub](03-starting-the-hub.md)

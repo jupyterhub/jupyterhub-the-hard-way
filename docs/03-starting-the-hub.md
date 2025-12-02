@@ -21,13 +21,16 @@ Proxy is started when typing JupyterHub. In this case, the configurable-http-pro
 Explain: server/user/username/tree
 
 ### Start and Stop a user's notebook server
-    - Start and Stop Server for the User
+
+```
+- Start and Stop Server for the User
+```
 
 ### Stop JupyterHub
 
 Control-C in the terminal to stop JupyterHub
 
----
+______________________________________________________________________
 
 ## Key Concepts
 
@@ -41,15 +44,15 @@ Control-C in the terminal to stop JupyterHub
   - the configurable-http-proxy to route the user to the hub for authentication.
   - the default authenticator which uses PAM and a username and password to
     authenticates a user
-  - The default spawner, a local process spawner, which the hub directs to spawns a      notebook server for each user as a local process.
+  - The default spawner, a local process spawner, which the hub directs to spawns a notebook server for each user as a local process.
 - At this point, no admin stuff has been discussed.
 
----
+______________________________________________________________________
 
 ## Extend your learning
 
 Modification: Set up an ssh tunnel [See assumptions above]
 
----
+______________________________________________________________________
 
 Next: [Creating a JupyterHub Configuration File](04-generate-jupyterhub-config-file.md)

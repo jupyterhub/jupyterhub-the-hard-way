@@ -1,0 +1,38 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 92d66cec-2a63-4e0e-bb8d-da3719abdbba
+  title: JupyterHub the Hard Way
+  description: Deploying JupyterHub from the ground up.
+  keywords:
+    - Jupyter
+    - JupyterHub
+  github: https://github.com/jupyterhub/jupyterhub-the-hard-way
+  toc:
+    - file: README.md
+    - title: Labs
+      children:
+        - file: docs/01-prerequisites.md
+        - file: docs/02-installing-packages.md
+        - file: docs/03-starting-the-hub.md
+        - file: docs/04-generate-jupyterhub-config-file.md
+        - file: docs/05-spawning-notebook-servers.md
+        - file: docs/06-configuring-the-chosen-spawner.md
+        - file: docs/07-using-a-different-proxy-traefik.md
+        - file: docs/08-setting-up-HTTPS.md
+        - file: docs/09-using-a-different-authenticator.md
+        - file: docs/10-cleaning-up.md
+    - title: Notes
+      children:
+        # reference docs from which this was made
+        - file: docs/hackmd-notes.md
+        - file: docs/installation-guide-hard.md
+
+site:
+  template: book-theme
+  title: JupyterHub the Hard Way
+  options:
+    logo: static/hub-rectangle.svg
+  actions:
+    - title: JupyterHub
+      url: https://hub.jupyter.org
