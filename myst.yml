@@ -8,6 +8,8 @@ project:
     - Jupyter
     - JupyterHub
   github: https://github.com/jupyterhub/jupyterhub-the-hard-way
+  references:
+    jupyterhub: https://jupyterhub.readthedocs.io/en/stable/
   toc:
     - file: README.md
     - file: docs/01-prerequisites.md

@@ -18,8 +18,8 @@ https://github.com/settings/apps/new
 - Developer settings
 - Oauth App
   - Give a name jupyterhub the hard way
-  - Homepage url https://hardway.jupyter.org
-  - callback url https://hardway.jupyter.org/
+  - Homepage url `https://hardway.jupyter.org`
+  - callback url `https://hardway.jupyter.org/hub/oauth_callback`
 
 Add Oauth info to `jupyterhub_config.py`
 
