@@ -32,4 +32,4 @@ jobs:
 
       - name: check links
         run: |
-          jupyter book build --check-links
+          jupyter book build --check-links --debug
