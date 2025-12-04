@@ -1,3 +1,5 @@
+(config-file)=
+
 # Generate a JupyterHub Configuration File
 
 In this lab, you will:
