@@ -1,5 +1,13 @@
 # JupyterHub the Hard Way
 
+```{notes}
+These are notes from the 2019 JupyterHub workshop,
+which prompted the creation of this tutorial.
+
+We will probably remove these once the tutorial really is complete,
+if we ever get there!
+```
+
 This tutorial roughly follows a conceptual TLJH-like deployment and its components. The goal of this tutorial is to give you an understanding of JupyterHub components and their configuration. Ultimately, the tutorial would guide you in how to create an authenticator, spawner or proxy.
 
 [TOC]

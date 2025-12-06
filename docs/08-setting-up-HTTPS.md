@@ -1,3 +1,5 @@
+(https)=
+
 # Setting up HTTPS
 
 ## Set up HTTPS using Let's Encrypt with Traefik
@@ -219,4 +221,4 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-Next: [Authenticators](09-using-a-different-authenticator.md)
+Next: [](#authenticator)

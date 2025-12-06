@@ -1,5 +1,20 @@
 # Install JupyterHub and JupyterLab from the ground up
 
+```{note}
+This document is to be merged into the longer tutorial,
+and will be removed when that is complete.
+
+Progress:
+
+- [x] overview
+- [x] virtualenv
+- [ ] configuration
+- [ ] systemd
+- [ ] conda
+- [ ] kernel envs
+- [ ] reverse proxy
+```
+
 The combination of [JupyterHub](https://jupyterhub.readthedocs.io) and [JupyterLab](https://jupyterlab.readthedocs.io)
 is a great way to make shared computing resources available to a group.
 

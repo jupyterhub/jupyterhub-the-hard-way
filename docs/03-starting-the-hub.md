@@ -1,3 +1,5 @@
+(starting-the-hub)=
+
 # Starting the Hub
 
 ## Start JupyterHub
@@ -58,14 +60,15 @@ is your username and password for the machine.
 ```{warning}
 If you are connecting to the Hub over the network and not yet using HTTPS or SSH tunnels to secure your connection to the Hub machine,
 your password will be sent in the clear.
-If this is the case, make sure you are using a throwaway password that you change soon (or the VM will be destroyed).
+
+See [](#ssh-tunnel) for how to use SSH tunnels for secure connections to a remote HTTP server.
 ```
 
 ````{note}
 If you don't have any password set yet (e.g. you setup a cloud VM with only SSH key access), you can create a password for your user with
 
 ```bash
-sudo passwd $USERNAME
+sudo passwd $USER
 ```
 
 ````
@@ -76,11 +79,11 @@ JupyterHub has
 
 - relayed your username and password to PAM to **authenticate** that you are really you
 - received from PAM that your username and password are correct
-- checked your username against the **allowed users**, which we set to: everybody who can successfully login with PAM
+- checked your username against the **allowed users**, which we set to: everybody who can successfully authenticate with PAM (more later)
 
 you will see this progress page:
 
-TODO: screenshot of progress page
+![Spawn pending screen](../images/spawn-pending.png)
 
 after a short period, you should see the familiar JupyterLab UI.
 
@@ -121,7 +124,8 @@ ______________________________________________________________________
 
 ## Key Concepts
 
-- JupyterHub is not significantly different than Jupyter notebook and JupyterLab. It's a tool for deploying web-based applications on behalf of users.
+- JupyterHub is not significantly different than the Jupyter Server launched when you type `jupyter lab`.
+  JupyterHub is a single-process web application based on the tornado web server, just like Jupyter Server.
 - JupyterHub relies on three major building blocks:
   - a **proxy** to route network traffic
   - an **authenticator** to verify users should be able to access the hub
@@ -142,4 +146,4 @@ Modification: Set up an ssh tunnel [See assumptions above]
 
 ______________________________________________________________________
 
-Next: [Creating a JupyterHub Configuration File](04-generate-jupyterhub-config-file.md)
+Next: [](#config-file)
