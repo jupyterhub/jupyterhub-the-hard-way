@@ -1,6 +1,25 @@
-# Spawning Notebook Servers
+(spawning)=
+
+# Spawning Servers
+
+One of the main things JupyterHub does is spawn servers on behalf of users.
+Each user gets their own server.
+Most commonly, this is a Jupyter Server, providing a web-based UI like the Jupyter Notebook or JupyterLab,
+but it could also be RStudio, VS Code, or even a full linux desktop.
+Anything that can be served via the web should work.
 
 ## Select a Spawner
+
+The Spawner is often the first thing to customize in a JupyterHub deployment.
+There are many implementations of Spawners,
+and picking the right one.
+
+Since we are putting together a single-machine deployment, there are three primary choices:
+
+1. LocalProcessSpawner (JupyterHub's default),
+   where each user's server is launched as a subprocess of JupyterHub,
+   _as that user_.
+2. SystemdSpawner
 
 ## DockerSpawner
 
@@ -81,4 +100,4 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-Next: [Configuring the Chosen Spawner](06-configuring-the-chosen-spawner.md)
+Next: [](#spawner)

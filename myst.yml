@@ -10,18 +10,21 @@ project:
   github: https://github.com/jupyterhub/jupyterhub-the-hard-way
   references:
     jupyterhub: https://jupyterhub.readthedocs.io/en/stable/
+    traitlets: https://traitlets.readthedocs.io/en/stable/
   toc:
     - file: README.md
-    - file: docs/01-prerequisites.md
-    - file: docs/02-installing-packages.md
-    - file: docs/03-starting-the-hub.md
-    - file: docs/04-generate-jupyterhub-config-file.md
-    - file: docs/05-spawning-notebook-servers.md
-    - file: docs/06-configuring-the-chosen-spawner.md
-    - file: docs/07-using-a-different-proxy-traefik.md
-    - file: docs/08-setting-up-HTTPS.md
-    - file: docs/09-using-a-different-authenticator.md
-    - file: docs/10-cleaning-up.md
+    - title: Labs
+      children:
+      - file: docs/01-prerequisites.md
+      - file: docs/02-installing-packages.md
+      - file: docs/03-starting-the-hub.md
+      - file: docs/04-generate-jupyterhub-config-file.md
+      - file: docs/05-spawning.md
+      - file: docs/06-configuring-the-chosen-spawner.md
+      - file: docs/07-using-a-different-proxy-traefik.md
+      - file: docs/08-setting-up-HTTPS.md
+      - file: docs/09-using-a-different-authenticator.md
+      - file: docs/10-cleaning-up.md
     # reference docs from which this was made
     # these are linked from README, but not in toc
     - file: docs/hackmd-notes.md

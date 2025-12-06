@@ -16,3 +16,5 @@ repos:
         additional_dependencies:
           - mdformat-myst
           - mdformat-black
+        args:
+          - "--number"
