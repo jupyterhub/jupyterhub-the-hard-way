@@ -1,6 +1,6 @@
 # JupyterHub the Hard Way
 
-```{notes}
+```{note}
 These are notes from the 2019 JupyterHub workshop,
 which prompted the creation of this tutorial.
 
