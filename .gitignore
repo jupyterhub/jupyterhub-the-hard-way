@@ -107,3 +107,6 @@ venv.bak/
 _build
 
 .DS_Store
+
+*.sqlite
+jupyterhub_cookie_secret

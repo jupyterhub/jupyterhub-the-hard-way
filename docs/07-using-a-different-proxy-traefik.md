@@ -1,3 +1,5 @@
+(proxy)=
+
 # Using a Different Proxy (Traefik)
 
 ## Setting up Traefik Proxy
@@ -67,4 +69,4 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-Next: [Setting Up HTTPS](08-setting-up-HTTPS.md)
+Next: [](#https)

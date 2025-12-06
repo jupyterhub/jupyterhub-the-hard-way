@@ -1,3 +1,5 @@
+(spawner)=
+
 # Configuring the Chosen Spawner
 
 ## Select a notebook server image
@@ -21,4 +23,4 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-Next: [Using a different proxy (Traefik)](07-using-a-different-proxy-traefik.md)
+Next: [](#proxy)

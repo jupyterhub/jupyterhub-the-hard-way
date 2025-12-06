@@ -1,3 +1,5 @@
+(authenticator)=
+
 # Using a Different Authenticator (GitHub Oauthenticator)
 
 ## Authenticators
@@ -40,4 +42,4 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-Next: [Authenticators](10-cleaning-up.md)
+Next: [](#cleaning-up)
