@@ -30,6 +30,6 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: check links
+      - name: Test build
         run: |
-          jupyter book build --html --check-links --debug
+          jupyter book build --strict --html --check-links
